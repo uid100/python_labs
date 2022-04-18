@@ -1,0 +1,10 @@
+# input
+get number1
+get number2
+
+# process
+product = number1 * number2
+
+# output
+display product
+ 

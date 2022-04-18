@@ -1,0 +1,55 @@
+Exercise 1 - (guided) ZIP code search
+ - design docs / pseudocode / flowchart...
+ - code and run
+    - minor error:  line 43  "i + 1"  ... should be i += 1  causes endless loop.
+    - missing:  result "roll_type" display 
+
+Exercise 2 - (guided) dice game
+ - design docs / pseudocode / flowchart...
+    - missing some detail.  
+        Are "variables" supposed to be lists? integers? floats? booleans?
+        input zip code?  does this get scanned from a machine or passed to the program?
+            do we need to ask the user for it?
+        what does "make sure it's correct" mean?  
+        Are these parallel arrays? 
+        are you returning the index? 
+        will you be looping through a list with a control variable? 
+        Does your design require lists to use a corresponding index for each association?
+        This doesn't look like enough information for you to write the code.
+
+inputs don't make sense. how will you input roll_types? what about dice rolls?
+your logic design (pseudocode) says you will figure out who won.. but then you try to load an array value with a random integer. There is no loop here,  And this is not the logic for "figuring out who won"  how will you do that? The logic is missing
+is there a loop to get the dice rolls?
+is there a loop through the results to accumulate counts?
+how will you determine the roll_type from the counts?
+
+
+ - code and run
+
+Exercise 3 - shipping charge
+ - design docs / pseudocode / flowchart...
+better... what does "input userzip.." mean?  if you read this to someone aloud, do they understand what you need to code?
+What does "we get output" mean?  Are you using a loop anywhere?  do the lists need to depend on each other?
+filename is misleading.
+
+ - code and run
+     - filenames.. exercise 3 says "Create a Python code file called ShippingChargeExercise3 for your program code."  a Python file. Very confusing trying to figure out what a "pt-2-zipcode.py" means. Your filenames need to make sense, just like variable names.
+    - code looks for an array called "expree[]"   which does not exist. Also, can't reach that block of code because the if: blocks are incorrect.
+    - code won't display "express" shipping charges
+
+Exercise 4 - dice game - loop
+ - design docs / pseudocode / flowchart...
+ - code and run
+    This is very good! I added this line before your ... if pWins > cWins...
+    print(f"\n{pWins} to {cWins}..")
+
+    Try it. It will make your testing easier.
+
+
+(general)
+ - test the code.  If you get trapped in an infinite loop, interrupt and add debugging print statements until you find where it is.
+
+
+[pseudocode]
+
+The design document is an important part of the engineering process. The design should contain all of the sequential steps, all of the customer required named constants, all of the prescribed calculations and be language-agnostic.   This is usually prepared and reviewed by the engineering team, and approved well before it is implemented. Only then does it go to the programmer to be coded. It should be standalone and ideally not require the programmer to go back to the design team with questions, because the design has already been approved.  Copying the tested solution and editing it to make it even less verbose is exactly opposite of the purpose for the pseudocode which should contain all of the detail.

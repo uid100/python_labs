@@ -1,0 +1,106 @@
+Using for loops in Python
+
+Last week, we used while loops in code exercises. To summarize, we used 
+a boolean (true or false) expression and evaluated it every time that
+we came to the top of the loop. If the expression was true, then
+we entered the loop and executed all of the instructions in that 
+code block (indented lines) and then returned to the top of the loop 
+and evaluated the boolean expression to see if it was still true or
+if anything had changed. If it was not true, then the code block was
+skipped over.
+
+Consider this code...
+
+while ( hungry == true ): # am I hungry?
+    howMuch += eat()
+    if ( howMuch >= enough ):
+        hungry = false # if enough, then set hungry to false
+
+This of course assumes that hungry is set to true above this
+segment, and that the method 'eat()' returns some amount, and 
+howMuch is initialized with a value, and enough is defined 
+somewhere before this code runs.
+
+But sometimes a for loop just makes more sense. If I need to 
+do 40 push-ups for instance, or 4 laps, or peel all of the oranges 
+in a bowl. I could use a while loop to do all of these things but 
+a for loop is usually easier to read and understand.
+
+In Python, for loops are generally done over a 'range' of values.
+
+If you've programmed in other languages, this for loop syntax might
+look a little different, and actually works like a cross between the 
+for command and the foreach command common in some languages.
+
+points = 0
+count = 0
+test_scores = [ 85, 88, 97, 95, 100 ]
+for score in test_scores:
+    total_points += score
+    count += 1
+    average_score = total_points / count
+
+The for loop iterated across the set of test_scores. 
+
+But for my push-ups or laps or the coin-flipping exercise, I have to 
+tell the computer what the set of values is that I need to iterate.
+
+In Python, we can use the 'range()' command just like you did in the 
+Factorial.py exercise at the beginning of the lab to create a set
+
+so what if I created the following?
+
+tooMuchWeight = 121
+startingWeight = 100
+moreWeight = 5
+for weight in range( startingWeight, tooMuchWeight, moreWeight ):
+    print( 'Next weight to lift: ', weight )
+
+Next weight to lift: 100
+Next weight to lift: 105
+Next weight to lift: 110
+Next weight to lift: 115
+Next weight to lift: 120
+
+This tells the executing code to make a new variable called 'weight' 
+and assign it to the first value in the range (startingWeight) then to 
+check to make sure that it's still less than the 'not to exceed' second 
+number (tooMuchWeight).
+
+Next do everything in the code block 'loop' and then add the third
+number (moreWeight) to our 'weight' variable and do the block again.
+Each time the lines of code in the block are done, check our index 
+value (weight) against the stop value (tooMuchWeight) and do it again.
+
+If I wanted the odd numbers from 1 to 10:
+
+#try this!
+for i in range (1,10,2):
+    print(i, end=',')
+
+since the first number is 1 and it adds two as long as i < 10
+
+the parameter "end=','" on the print() statement means that instead 
+of printing a new-line character, and moving to the next line each 
+time, replace the end of line character with a comma.
+
+So the result should be:
+1,3,5,7,9,
+
+If you were to write the same thing as a while loop,
+
+i=1
+while( i < 10 ):
+    print(i, end='')
+    i += 1
+
+
+Using a for loop to flip a coin 20 times,
+
+maxFlips = 20
+for flip in range(1,maxFlips,1):
+    # find a random value and set to heads or tails 
+    # add it to my totals and do it again!
+    print( flip )
+
+... this code will just make a list of numbers from 1 to 20.

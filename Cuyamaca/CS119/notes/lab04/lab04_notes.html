@@ -1,0 +1,98 @@
+Lab04 - Feedback
+
+Ex.1   Exponent & Factorial
+
+Flowchart (jpg)
+
+Code 
+
+
+<!-- ----------------------------------------------- -->
+<hr>
+Ex.2   Future Value
+
+Pseudocode OR Flowchart
+
+<h3>Loop</h3>
+Declarations and inputs are ok, but there should be a loop specified in the plan to 
+follow the logic. Does this describe the whole process step-by-step?
+
+
+could be clearer. Not clear what the sequential logic steps in your design document are. 
+
+Keep your pseudocode simple and clear.  Program logic and design, not code.
+Code
+
+----------
+
+ok.  but please make sure that your program design does not look like python code. This should be simple sequential instructions. 
+
+
+Again, your pseudocode should be readable by anyone. Clearly explain what your logic is, what will you do first, then... ?will you repeat steps? how long?  this looks way too much like actual code and very language specific.
+
+
+
+
+<h3>Formatting</h3>
+The print format needs curly braces around the formatting in the string, not parentheses. 
+ 
+Try the formatting process from the example.
+try dropping this into the IDLE environment to see what it does.  
+
+month = 6
+amount = 14.31111
+print("Month: {:3d}  Balance:  {:.2f}".format(month, amount))
+
+'d' is used to format a number as an integer, in this case reserving 3 digits (this is handy 
+if there are columns to line up)
+'f' is for formatting numbers as floating point, a number before the decimal will reserve a 
+total number of digits to reserve like we did for integers, the number after the period 
+specifies how many decimal digits to use.
+
+
+<!-- ----------------------------------------------- -->
+Ex.3   Coin Toss
+
+Pseudocode OR Flowchart
+
+<h3></h3>
+
+This says you have some variables declared and then you're calculating things, but it's 
+not clear where they are coming from. 
+
+Is there a block of code logic to iterate through? How do you know when it's "heads" or
+"tails"? where does that come from?  Are you using a random value generator?  
+
+This doesn't look like it tracks through the process.
+
+
+Code
+
+
+while month_num <= months:
+    total += monthly_amt
+    interest = total * monthly_int_rate
+    tot_interest += interest
+    fv = (fv + monthly_amt) * (1 + monthly_int_rate)
+    total += interest
+    # message format
+    print(msg.format(month_num, fv, interest))
+
+    month_num += 1
+
+
+    
+
+Q: What does import random mean? 
+‘import’ tells Python to find the module (library of functions) and add it to your program as if it was written as part of it.
+
+So ‘import random’ says to get the library called ‘random’ so that I can use the utility functions that it includes to do things like generate a random integer:    randint()
+
+When we call that function, we tell Python to get it from that module that we included with the import statement.
+
+So 
+
+MIN = 0
+MAX = 36
+Import random
+roulette_spin = random.randint(MIN, MAX)

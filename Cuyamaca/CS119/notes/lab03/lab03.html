@@ -1,0 +1,18 @@
+Great!
+This is correct, but consider.. 
+
+if  Month >= 1 and month <= 3:   
+
+This potentially is 4 separate tests:   x>1?  x==1?  x<3?  x==3?
+but using this instead:
+
+if Month < 4:
+elif Month < 7:
+elif Month <10:
+else: 
+
+ is a minimum of 1 and a maximum of 3 tests for all of the same results,
+ instead of the potentially 16 tests that you used. 
+
+This is a small example, but imagine if you were processing thousands of data requests. 
+The user would definitely get frustrated by the slow down.

@@ -1,0 +1,17 @@
+Methods.py contains library of reusable methods:
+   get_float_val(prompt)
+   get_int_val(prompt)
+   is_float(x)
+   is_integer(x)
+   find_string(list,search)
+   find_int(list,x)
+
+MethodTest.py 
+    main()
+        test get_float_val(prompt)
+        test get_int_val(prompt)
+        test is_float(x)
+        test is_integer(x)
+        test find_string(list,search)
+        test find_int(list,x)
+
